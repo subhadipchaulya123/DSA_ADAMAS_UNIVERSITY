@@ -1,6 +1,6 @@
 /*
 WAP in c to take input marks of ten student randomly in an array sort 
-the array using merge sort and show rhe highest and lowest marks
+the array using merge sort and show the highest and lowest marks
 sample case:[80,73,59,92,86,47,92,58,91,48]
 */
 
