@@ -49,19 +49,11 @@ void display(int arr[], int n){
 
     printf("\n");
 }
-int maximum(int arr[], int n){
-return arr[n - 1];
-}
-int minimum(int arr[], int n){
- return arr[0];
-}
 int main(){
     int arr[] = {5, 2, 1, 3, 8, 9, 6, 4, 7, 12};
     int n = sizeof(arr) / sizeof(arr[0]);
     quick_sort(arr, 0, n - 1);
     printf("Sorted array: ");
     display(arr, n);
-    printf("Highest number = %d\n", maximum(arr, n));
-    printf("Lowest number = %d\n", minimum(arr, n));
     return 0;
 }
