@@ -1,3 +1,9 @@
+/*
+ wap in c to take input number in A(2*2) and B(2*2) matrix.Find the sum of A & B and store in  C(2*2)
+matrix.Print A,B,C
+
+ */   
+
 #include<stdio.h>
 void input(int arr[10][10],int r,int c){
     for(int i=0;i<r;i++){
