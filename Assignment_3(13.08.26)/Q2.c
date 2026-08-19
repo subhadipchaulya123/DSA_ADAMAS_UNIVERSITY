@@ -2,7 +2,7 @@
 consider a book rack,where books are placed in stack.Each book has acc_no
 (1,2,3,4........)if you one asked to place book in stack using acc_no
 have you performe these operation on stack of books.the sequence of operation
-push(1),push(2),push(3),push(4),pop(3),push(5),pop(5) display the final position of books
+push(1),push(2),push(3),push(4),pop(4),push(5),pop(5) display the final position of books
 */
 #include <stdio.h>
 
