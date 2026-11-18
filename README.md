@@ -1,6 +1,6 @@
 # CSE12106 | Principles of Programming Language Lab
 
-![Language](https://shields.io/badge/Lanhuage-C-red)
+![Language](https://shields.io/badge/Language-C-red)
 ![Course](https://img.shields.io/badge/Course-CSE12106-orange)
 ![University](https://img.shields.io/badge/University-Adamas%20University-red)
 ![Semester](https://img.shields.io/badge/Semester-3rd-violet)
