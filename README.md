@@ -16,7 +16,7 @@
 | **Roll No.** | `UG/04/BTCSEAIML/2025/031` |
 | **Registration No.** | `AU/2025/0000379` |
 | **Section** | G |
-| **Course Code** | `CSE12106` |
+| **Course Code** | `CSE12107` |
 | **Course Name** | DSA Lab |
 | **Subject** | DSA |
 | **University** | Adamas University |
@@ -32,8 +32,8 @@
 - **Roll No.:** `UG/04/BTCSEAIML/2025/031`
 - **Registration No.:** `AU/2025/0000379`
 - **Section:** G
-- **Course Code:** CSE12106
-- **Subject:** DSA
+- **Course Code:** CSE12107
+- **Subject:** DSA LAB
 - **University:** Adamas University
 - **Semester:** 3rd Semester (2nd Year)
 
