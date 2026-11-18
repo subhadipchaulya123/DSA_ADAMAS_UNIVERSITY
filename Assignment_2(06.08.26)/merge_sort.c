@@ -4,55 +4,82 @@ the array using merge sort and show the highest and lowest marks
 sample case:[80,73,59,92,86,47,92,58,91,48]
 */
 
-#include<stdio.h>
-#include <stdlib.h>
-void merge(int arr[],int start,int mid,int end);
-void merge_sort(int arr[],int start,int end){
-if(start==end){
-    return ;
-}
-int mid=start+(end-start)/2;
-merge_sort(arr,start,mid);
-merge_sort(arr,mid+1,end);
-merge(arr,start,mid,end);
+#include <stdio.h>
 
-}
-void merge(int arr[],int start,int mid,int end){
-   int size = end - start + 1;
- int *temp = (int *)malloc(size * sizeof(int));
+void merge(int arr[], int start, int mid, int end)
+{
+    int temp[100];
+    int left = start;
+    int right = mid + 1;
+    int k = 0;
 
-    if (temp == NULL)
+    while (left <= mid && right <= end)
     {
-        printf("Memory allocation failed!\n");
-        return;
+        if (arr[left] < arr[right])
+        {
+            temp[k] = arr[left];
+            left++;
+        }
+        else
+        {
+            temp[k] = arr[right];
+            right++;
+        }
+        k++;
     }
- int left=start,right=mid+1,index=0;
- while(left<=mid && right <=end){
-    if(arr[left]<=arr[right]){
-        temp[index]=arr[left];
-        index++;
-        left++;
-    }
-    else{
-        temp[index]=arr[right];
-        index++;
-        right++;
-    }
- }
- while (left <= mid){
-        temp[index] = arr[left];
-        index++;
-        left++;
- }
-    while (right <= end){
-        temp[index] = arr[right];
-        index++;
-        right++;
-    }
-    for (int i = 0; i < index; i++){
-      arr[start + i] = temp[i];
 
+    while (left <= mid)
+    {
+        temp[k] = arr[left];
+        left++;
+        k++;
     }
+
+    while (right <= end)
+    {
+        temp[k] = arr[right];
+        right++;
+        k++;
+    }
+
+    for (int i = 0; i < k; i++)
+    {
+        arr[start + i] = temp[i];
+    }
+}
+
+void merge_sort(int arr[], int start, int end)
+{
+    if (start < end)
+    {
+        int mid = (start + end) / 2;
+
+        merge_sort(arr, start, mid);
+        merge_sort(arr, mid + 1, end);
+
+        merge(arr, start, mid, end);
+    }
+}
+
+int main()
+{
+    int arr[10] = {80, 73, 59, 92, 86, 47, 99, 58, 91, 48};
+
+    int n = 10;
+
+    merge_sort(arr, 0, n - 1);
+
+    printf("Sorted marks: ");
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\nLowest marks = %d", arr[0]);
+    printf("\nHighest marks = %d\n", arr[n - 1]);
+
+    return 0;
 }
 int main()
 {
